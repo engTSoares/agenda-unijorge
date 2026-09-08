@@ -3,3 +3,11 @@
     border-radius: 15px;
     margin-left: 10;
 }
+
+.avisos{
+    list-style-type: none;
+}
+
+.cartao.invalido {
+    border: 2px solid red;
+}

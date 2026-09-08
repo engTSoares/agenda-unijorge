@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { PessoaModel } from './pesssoa.model';
+import { validarPessoa } from './pessoa.validacao';
 
 @Component({
   selector: 'app-pessoa',
@@ -11,14 +12,14 @@ export class Pessoa {
 pessoas: PessoaModel[] = [
  {  id: 1, 
     nome: 'Ana Souza',
-    curso: 'Eng. Computação',
+    curso: 'Análise e Desenvolvimento de Sistemas',
     email: 'ana@exemplo.com',
-    telefone: '100 98756787',
+    telefone: '99 987567 87',
     vinculo: 'aluno',
     ativo: true },
   { id: 2, 
     nome: 'Bruno Lima',
-    curso: 'Eng. Computação',
+    curso: 'Eng. da Computação',
     email: 'bruno@exemplo.com',
     telefone: '100 97856783',
     vinculo: 'professor',
@@ -40,10 +41,18 @@ pessoas: PessoaModel[] = [
     {
       id: 5,
       nome: 'Heitor Braga',
-      curso: 'Eng. da Computação',
-      email: 'heitor@exemplo.com', 
+      curso: 'Inteligência Artificial',
+      email: 'heitorexemplo.com',
+      telefone: '6776183', 
       vinculo: 'aluno',
       ativo:true
     }
 ];
+
+resultados = this.pessoas.map(pessoa => ({
+  pessoa,
+  erros: validarPessoa(pessoa)
+}));
+
 }
+

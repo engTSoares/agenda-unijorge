@@ -56,14 +56,27 @@ export function validarCurso(curso: string ) : string | null {
     return null;
 }
 
+export function validarPessoa(pessoa:PessoaModel) : string[] {
+    const resultados = [
+        validarNome(pessoa.nome),
+        validarEmail(pessoa.email),
+        validarCurso(pessoa.curso),
+        validarTelefone(pessoa.telefone)
+    ];
+
+    return resultados.filter((mensagem): mensagem is string => mensagem !== null);
+}
+
+
+
 /*
 export function validarIdsUnicos(pessoas: PessoaModel[]): string[]{
 
-   
-}
 
-export function validarPessoa(pessoa:PessoaModel) : string[] {
    
-
 }
 */
+
+
+
+
