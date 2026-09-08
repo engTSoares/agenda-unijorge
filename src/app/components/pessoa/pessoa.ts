@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { PessoaModel } from './pesssoa.model';
-import { validarPessoa } from './pessoa.validacao';
+import { validarPessoa, validarIdsUnicos } from './pessoa.validacao';
 
 @Component({
   selector: 'app-pessoa',
@@ -49,10 +49,14 @@ pessoas: PessoaModel[] = [
     }
 ];
 
+//instância da validação de pessoas
 resultados = this.pessoas.map(pessoa => ({
   pessoa,
   erros: validarPessoa(pessoa)
 }));
+
+//instância da validação de IDs
+avisosDuplicados = validarIdsUnicos(this.pessoas);
 
 }
 

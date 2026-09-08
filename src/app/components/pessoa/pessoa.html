@@ -3,11 +3,11 @@
 @for (r of resultados; track r.pessoa.id) {
   <article class="cartao" [class.invalido]="r.erros.length > 0">
     <h3>{{ r.pessoa.nome }}</h3>
-    <p>Email: {{ r.pessoa.email }}</p>
-    <p>Curso: {{ r.pessoa.curso }}</p>
-    <p>Telefone: {{ r.pessoa.telefone }}</p>
-    <p>Vínculo: {{ r.pessoa.vinculo }}</p>
-    <p>Matrícula: {{ r.pessoa.ativo }}</p>
+    <p>Email: {{ r.pessoa.email }} </p>
+    <p>Curso: {{ r.pessoa.curso }} </p>
+    <p>Telefone: {{ r.pessoa.telefone }} </p>
+    <p>Vínculo: {{ r.pessoa.vinculo }} </p>
+    <p>Matrícula: {{ r.pessoa.ativo }} </p>
 
     @if (r.erros.length > 0) {
       <ul class="avisos">

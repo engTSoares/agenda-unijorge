@@ -1,3 +1,4 @@
+import { Pessoa } from './pessoa';
 import { PessoaModel } from './pesssoa.model';
 
 const CURSOS_VALIDOS = [
@@ -68,14 +69,21 @@ export function validarPessoa(pessoa:PessoaModel) : string[] {
 }
 
 
-
-/*
 export function validarIdsUnicos(pessoas: PessoaModel[]): string[]{
+    const IDvistos = new Set<number>();
+    const erros: string[] = [];
 
+    for (const item of pessoas) {
+        if (IDvistos.has(item.id)) {
+        erros.push(`Código duplicado: ${item.id}`);
+        }
+        IDvistos.add(item.id);
+    }
 
-   
+  return erros;
+
 }
-*/
+
 
 
 
