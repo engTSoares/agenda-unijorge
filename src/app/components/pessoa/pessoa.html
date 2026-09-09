@@ -1,5 +1,13 @@
 <h2>Pessoas</h2>
 
+@if (avisosDuplicados.length > 0) {
+  <div class="aviso-duplicados">
+    @for (aviso of avisosDuplicados; track aviso) {
+      <p>{{ aviso }}</p>
+    }
+  </div>
+}
+
 @for (r of resultados; track r.pessoa.id) {
   <article class="cartao" [class.invalido]="r.erros.length > 0">
     <h3>{{ r.pessoa.nome }}</h3>

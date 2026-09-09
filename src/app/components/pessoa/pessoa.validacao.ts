@@ -75,7 +75,7 @@ export function validarIdsUnicos(pessoas: PessoaModel[]): string[]{
 
     for (const item of pessoas) {
         if (IDvistos.has(item.id)) {
-        erros.push(`Código duplicado: ${item.id}`);
+        erros.push(`ID ${item.id} duplicado`);
         }
         IDvistos.add(item.id);
     }

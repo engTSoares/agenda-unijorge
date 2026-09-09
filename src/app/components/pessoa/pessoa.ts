@@ -17,7 +17,7 @@ pessoas: PessoaModel[] = [
     telefone: '99 987567 87',
     vinculo: 'aluno',
     ativo: true },
-  { id: 2, 
+  { id: 1, 
     nome: 'Bruno Lima',
     curso: 'Eng. da Computação',
     email: 'bruno@exemplo.com',
