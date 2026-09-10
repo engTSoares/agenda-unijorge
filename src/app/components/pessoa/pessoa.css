@@ -1,11 +1,59 @@
+:host{
+    display: grid;
+    gap:16px;
+}
+
+body {
+    display: grid;
+    justify-items: start;
+    gap: 16px;
+    margin: 0;
+    padding: 16px;
+    background-color: #f4f4f4;
+}
+
 .cartao{
+    display: grid;
+    grid-auto-rows: min-content;
     background-color: rgb(144, 144, 240);
     border-radius: 15px;
-    margin-left: 10;
+    width: 100%;
+    max-width: 500px;
+    align-content: start;
+    margin-left: 10px;
+    padding: 9px ;
+    box-sizing: border-box;
+    gap:8px;
+    
+}
+
+.nome-pessoa, .info-pessoa{
+    margin: 0;
+    color: black;
 }
 
 .avisos{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: rgba(216, 13, 13, 0.89);
+}
+
+.aviso-id-duplicados{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    background-color: rgb(211, 74, 74);
+    text-decoration-color: black;
+    border-radius: 8px;
+    opacity: 86%;
+    max-width: 60vw;
+    height: 29px;
+    padding: 0 10px;
+    
 }
 
 .cartao.invalido {

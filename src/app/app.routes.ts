@@ -6,9 +6,9 @@ import { NaoEncontrada } from './components/nao-encontrada/nao-encontrada';
 export const routes: Routes = [
      { path: '', redirectTo: 'home',
     pathMatch: 'full' },
-    { path: '',   component: Home    },
+    { path: 'home',   component: Home    },
     {
-        path: '', component: Pessoa
+        path: 'pessoa', component: Pessoa
     }, 
     { path: '**', component: NaoEncontrada }
 ];

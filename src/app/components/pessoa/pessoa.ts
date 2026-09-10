@@ -43,7 +43,6 @@ pessoas: PessoaModel[] = [
       nome: 'Heitor Braga',
       curso: 'Inteligência Artificial',
       email: 'heitorexemplo.com',
-      telefone: '6776183', 
       vinculo: 'aluno',
       ativo:true
     }

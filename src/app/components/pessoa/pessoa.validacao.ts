@@ -1,4 +1,3 @@
-import { Pessoa } from './pessoa';
 import { PessoaModel } from './pesssoa.model';
 
 const CURSOS_VALIDOS = [
@@ -38,7 +37,7 @@ export function validarEmail(email: string) : string | null {
 export function validarTelefone( telefone?:string) : string | null {
     //o campo pode ser vazio
     if(telefone === undefined){
-        return null;
+       return null;
     }
     
     const telefoneLimpo = telefone.replace(/\D/g, '');
